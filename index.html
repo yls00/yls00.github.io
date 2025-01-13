@@ -3,215 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Your Story</title>
+    <title>Sound Library</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #1e3c72, #2a5298);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 20px;
+            background-color: #f5f5f5;
             margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #003366;
             color: white;
         }
 
-        h1 {
+        header h1 {
+            margin: 0;
             font-size: 2.5rem;
-            color: #f8f9fa;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-bottom: 30px;
         }
 
-        .grid-container {
+        .container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            width: 100%;
-            max-width: 1200px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
         }
 
-        .audio-card {
-            background: #ffffff;
-            border: none;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 10px;
+        .sound-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .audio-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .audio-card h2 {
-            font-size: 1rem;
-            color: #343a40;
-            margin-bottom: 8px;
+        .sound-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            color: #003366;
         }
 
         audio {
             width: 100%;
-            border-radius: 5px;
-            outline: none;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #003366;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
         }
     </style>
-    <script>
-        function enableLoopOnPlay(audioId) {
-            const audio = document.getElementById(audioId);
-            audio.loop = true;
-        }
-    </script>
 </head>
 <body>
-    <h1>Create Your Story</h1>
-    <div class="grid-container">
-        <div class="audio-card">
-            <h2>Ambience Guitar</h2>
-            <audio id="ambience_guitar" controls onplay="enableLoopOnPlay('ambience_guitar')">
-                <source src="src/ambience_guitar.mp3" type="audio/mpeg">
+    <header>
+        <h1>Create Your Story: Sound Library</h1>
+    </header>
+
+    <div class="container">
+        <div class="sound-card">
+            <h3>Acoustic Guitar</h3>
+            <audio controls>
+                <source src="src/Acoustic Guitar.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="audio-card">
-            <h2>Bass</h2>
-            <audio id="bass" controls onplay="enableLoopOnPlay('bass')">
-                <source src="src/bass.mp3" type="audio/mpeg">
+        <div class="sound-card">
+            <h3>Birds</h3>
+            <audio controls>
+                <source src="src/Birds.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="audio-card">
-            <h2>Birds</h2>
-            <audio id="birds" controls onplay="enableLoopOnPlay('birds')">
-                <source src="src/birds.mp3" type="audio/mpeg">
+        <div class="sound-card">
+            <h3>Cicadas</h3>
+            <audio controls>
+                <source src="src/Cicadas.wav" type="audio/wav">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="audio-card">
-            <h2>Clap</h2>
-            <audio id="clap" controls onplay="enableLoopOnPlay('clap')">
-                <source src="src/clap.mp3" type="audio/mpeg">
+        <div class="sound-card">
+            <h3>Clarinet</h3>
+            <audio controls>
+                <source src="src/Clarinet.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="audio-card">
-            <h2>Cicada</h2>
-            <audio id="frogs" controls onplay="enableLoopOnPlay('frogs')">
-                <source src="src/cicada.mp3" type="audio/mpeg">
+        <div class="sound-card">
+            <h3>Drum</h3>
+            <audio controls>
+                <source src="src/Drum.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="audio-card">
-            <h2>Guitar</h2>
-            <audio id="guitar" controls onplay="enableLoopOnPlay('guitar')">
-                <source src="src/guitar.mp3" type="audio/mpeg">
+        <div class="sound-card">
+            <h3>Flute</h3>
+            <audio controls>
+                <source src="src/Flute.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="audio-card">
-            <h2>Hi-Hat</h2>
-            <audio id="hi_hat" controls onplay="enableLoopOnPlay('hi_hat')">
-                <source src="src/hi-hat.mp3" type="audio/mpeg">
+        <div class="sound-card">
+            <h3>Harmonic Ambience</h3>
+            <audio controls>
+                <source src="src/Harmonic Ambience.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="audio-card">
-            <h2>Kick</h2>
-            <audio id="kick" controls onplay="enableLoopOnPlay('kick')">
-                <source src="src/kick.mp3" type="audio/mpeg">
+        <div class="sound-card">
+            <h3>PAD</h3>
+            <audio controls>
+                <source src="src/PAD.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="audio-card">
-            <h2>PAD</h2>
-            <audio id="pad" controls onplay="enableLoopOnPlay('pad')">
-                <source src="src/PAD.mp3" type="audio/mpeg">
+        <div class="sound-card">
+            <h3>Piano</h3>
+            <audio controls>
+                <source src="src/Piano.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="audio-card">
-            <h2>Piano</h2>
-            <audio id="piano" controls onplay="enableLoopOnPlay('piano')">
-                <source src="src/piano.mp3" type="audio/mpeg">
+        <div class="sound-card">
+            <h3>Pre-piano</h3>
+            <audio controls>
+                <source src="src/Pre-piano.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="audio-card">
-            <h2>Pre-Piano</h2>
-            <audio id="pre_piano" controls onplay="enableLoopOnPlay('pre_piano')">
-                <source src="src/pre-piano.mp3" type="audio/mpeg">
+        <div class="sound-card">
+            <h3>Rain</h3>
+            <audio controls>
+                <source src="src/Rain.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="audio-card">
-            <h2>Rain</h2>
-            <audio id="rain" controls onplay="enableLoopOnPlay('rain')">
-                <source src="src/rain.mp3" type="audio/mpeg">
+        <div class="sound-card">
+            <h3>Synth Bass</h3>
+            <audio controls>
+                <source src="src/Synth Bass.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="audio-card">
-            <h2>Shaker</h2>
-            <audio id="shaker" controls onplay="enableLoopOnPlay('shaker')">
-                <source src="src/shaker.mp3" type="audio/mpeg">
+        <div class="sound-card">
+            <h3>Synth String</h3>
+            <audio controls>
+                <source src="src/Synth String.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="audio-card">
-            <h2>Snare</h2>
-            <audio id="snare" controls onplay="enableLoopOnPlay('snare')">
-                <source src="src/snare.mp3" type="audio/mpeg">
+        <div class="sound-card">
+            <h3>Typing</h3>
+            <audio controls>
+                <source src="src/Typing.wav" type="audio/wav">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="audio-card">
-            <h2>String 1</h2>
-            <audio id="string1" controls onplay="enableLoopOnPlay('string1')">
-                <source src="src/string1.mp3" type="audio/mpeg">
+        <div class="sound-card">
+            <h3>Water Drop</h3>
+            <audio controls>
+                <source src="src/Water Drop.wav" type="audio/wav">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
-        <div class="audio-card">
-            <h2>String 2</h2>
-            <audio id="string2" controls onplay="enableLoopOnPlay('string2')">
-                <source src="src/string2.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-
-        <div class="audio-card">
-            <h2>Water Drops</h2>
-            <audio id="water_drops" controls onplay="enableLoopOnPlay('water_drops')">
-                <source src="src/water_drops.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-
-        <div class="audio-card">
-            <h2>Wind</h2>
-            <audio id="wind" controls onplay="enableLoopOnPlay('wind')">
-                <source src="src/wind.mp3" type="audio/mpeg">
+        <div class="sound-card">
+            <h3>Wind</h3>
+            <audio controls>
+                <source src="src/Wind.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2025 Create Your Story - Sound Library by Yuling Shi</p>
+    </footer>
 </body>
 </html>
+
